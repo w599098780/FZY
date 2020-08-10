@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>无标题文档</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		img {
+			display: block;
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		div {
+			margin: 0;
+			padding: 0;
+		}
+
+		.box {
+			display: flex;
+			height: 100vh;
+		}
+
+		.name {
+			width: 203px;
+			border: 3px solid #000000;
+			height: 100vh;
+			box-sizing: border-box;
+			position: relative;
+			overflow: hidden;
+		}
+		.name .t{
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%);
+		}
+		.t1{
+			top:2%
+		}
+		.t2{
+			top:36%
+		}
+		.t3{
+			top:72%
+		}
+
+		.name p {
+			font-size: 15vw;
+			font-family: "苹方 中等";
+			text-align: center;
+			line-height: 254px;
+		}
+
+		.main {
+			flex: 1;
+			height: 100vh;
+			overflow-y: auto;
+		}
+
+		.name,
+		.main {
+			float: left;
+		}
+	
+
+		.part1 {
+			border-bottom: 3px solid #000;
+			height: 67px;
+		}
+
+		.part1 p {
+			font-size: 40px;
+			font-family: "苹方 粗体";
+			line-height: 67px;
+			letter-spacing: 5px;
+		}
+
+		.part1_text1 {
+			float: left;
+			margin-left: 20px;
+		}
+
+		.part1_text2 {
+			float: right;
+			margin-right: 50px;
+		}
+		.park{
+			width: 78.6%;
+			display: inline-block;
+			border-bottom: 1px solid #000;
+			box-sizing: border-box;
+		}
+		.part2{
+			display: flex;
+			
+		}
+		.pic2 {
+			flex: 1;
+			box-sizing: border-box;
+			display: inline-block;
+			border-left: 3px solid #000
+
+		
+		}
+		.pic2 img{
+			width: 100%;
+		}
+		.park .pic1{
+			display: block;
+		}
+
+		.park .pic1 img {
+			width: 100%;
+		}
+	
+
+		.park_text {
+			width: 100%;
+			border-top: 3px solid #000
+		}
+
+		.park_text1 {
+			font-size: 2.6vw;
+			font-family: "苹方 粗体";
+			letter-spacing: 1px;
+			line-height: 3vw;
+			padding-left: 20px;
+			padding-top: 1vw;
+		}
+
+		.park_text2 {
+			font-size: 2.2vw;
+			font-family: "苹方 中等";
+			padding-left: 20px;
+	
+	
+		}
+	
+		.part3 {
+			display: flex;
+			border-bottom: 3px solid #000;
+		}
+		.bookPart{
+			width: 60%;
+			display: flex;
+		}
+		.book1 {
+			width: 54%;
+		}
+		.book2 a{
+			display: inline-block;
+		}
+
+		.book1 img {
+			width: 100%;
+	
+		}
+
+		.book1 .book1_text1 {
+			font-size: 2vw;
+			font-family: "苹方 粗体";
+			padding-left: 20px;
+			margin-top: 0.5vw;
+			line-height: 3vw;
+		}
+
+		.book1 .book1_text2 {
+			font-size: 1.4vw;
+			font-family: "苹方 中等";
+			padding-left: 20px;
+			margin-top: 1vw;
+		}
+
+		.book2 {
+			flex: 1;
+			display: inline-block;
+			border-left: 1px solid #000;
+			border-right: 1px solid #000;
+		}
+		.book2 img{
+			width: 100%;
+		}
+		.book2 .book2_text1 {
+			font-size: 1.6vw;
+			font-family: "苹方 粗体";
+			line-height: 2.3vh;
+			padding-left: 20px;
+			margin-top: 0.2vw;
+		}
+
+		.book2 .book2_text2 {
+			font-size: 1vw;
+			font-family: "苹方 中等";
+			padding-left: 20px;
+			margin-top: 0.5vw;
+		}
+
+		.poster {
+			flex: 1;
+			position: relative;
+			overflow: hidden;
+		}
+		.poster img{width: 100%;}
+
+		.poster1 {
+			height: 26px;
+			border-bottom: 1px solid #000;
+		}
+
+		.poster1 li {
+			float: right;
+		}
+
+		.poster1 .poster1_text1 {
+			font-size: 1.1vw;
+			font-family: "苹方 粗体";
+			line-height: 26px;
+		}
+
+		.poster1 .poster1_text2 {
+			font-size: 1.1vw;
+			font-family: "苹方 中等";
+			line-height: 26px;
+			margin-right: 10px;
+		}
+
+		.ui {
+			height: 303px;
+		}
+
+		.ui .ui_text1 {
+			width: 100%;
+			margin-top: 1vw;
+		}
+
+		.ui .ui_text1 p {
+			text-align: justify;
+			font-family: "苹方 粗体";
+			line-height: 4.6vh;
+			font-size: 1.7vw;
+			margin-left: 0.5vw;
+		}
+
+		.ui .ui_text2 {
+			font-size: 1.3vw;
+			font-family: "苹方 中等";
+			margin-top: 0.7vw;
+			margin-bottom: 1vw;
+			margin-left: 0.5vw;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<div class="name">
+			<p class="t t1">F</p>
+			<p class="t t2">Z</p>
+			<p class="t t3">Y</p>
+		</div>
+		<div class="main">
+			<div class="part1">
+				<p class="part1_text1">ZiYu(Jade)Feng</p>
+				<p class="part1_text2">Portfolio</p>
+			</div>
+			<div class="part2">
+				<div class="park">
+					<a href="./long.html" class="pic1"><img src="images/1.jpg"></a>
+					<div class="park_text">
+						<p class="park_text1">Interactive Poster:Music Nutrition Amusement <br>Park</p>
+						<p class="park_text2">Interactive device desgin,20.12.2019</p>
+					</div>
+				</div>
+				<a class="pic2" href="./poster.html">
+					<img src="images/5.jpg">
+				</a>
+			</div>
+				<div class="part3">
+					<div class='bookPart'>
+						<ul class="book1">
+							<li class="pic3"><a href="./book.html"><img src="images/2.jpg"></a></li>
+							<li class="book1_text1">Illustration and Book Binding Desgin of "Shan<br> Hai Jing"</li>
+							<li class="book1_text2">Book Binding Desgin,17.06.2017</li>
+						</ul>
+						<ul class="book2">
+							<li class="pic4"><a href="./print.html"><img src="images/3.png"></a></li>
+							<li class="book2_text1">Hand-printed design</li>
+							<li class="book2_text2">Book Binding Desgin,17.06.2017</li>
+						</ul>
+					</div>
+				
+				<div class="poster">
+					<ul class="poster1">
+						<li class="poster1_text1">poster desgin</li>
+						<li class="poster1_text2">Service desgin,11.11.2018</li>
+					</ul>
+					<ul class="ui">
+						<li class="ui_text1"><p>Based on the service concept:a mobile APP that facilitates the life of international students</p></li>
+						<li class="ui_text2">Service design,interaction design,UI design,11.11.2018</li>
+						<li class="pic5"><a href="./app.html"><img src="images/4.png"></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

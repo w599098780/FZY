@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>无标题文档</title>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		img {
+			display: block;
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		div {
+			margin: 0;
+			padding: 0;
+		}
+
+		.box {
+			display: flex;
+			height: 100vh;
+		}
+
+		.name {
+			width: 203px;
+			border: 3px solid #000000;
+			height: 100vh;
+			box-sizing: border-box;
+			position: relative;
+			overflow: hidden;
+		}
+		.name .t{
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%);
+		}
+		.t1{
+			top:2%
+		}
+		.t2{
+			top:36%
+		}
+		.t3{
+			top:72%
+		}
+
+		.name p {
+			font-size: 15vw;
+			font-family: "苹方 中等";
+			text-align: center;
+			line-height: 254px;
+		}
+
+		.main {
+			flex: 1;
+			height: 100vh;
+			overflow-y: auto;
+		}
+
+		.name,
+		.main {
+			float: left;
+		}
+	
+
+		.part1 {
+			border-bottom: 3px solid #000;
+			height: 67px;
+		}
+
+		.part1 p {
+			font-size: 40px;
+			font-family: "苹方 粗体";
+			line-height: 67px;
+			letter-spacing: 5px;
+		}
+
+		.part1_text1 {
+			float: left;
+			margin-left: 20px;
+		}
+		.part1 .part1_text3 {
+			float: left;
+			margin-left: 20px;
+			font-size: 2.2vw;
+		
+		}
+
+		.part1_text2 {
+			float: right;
+			margin-right: 50px;
+		}
+		.park{
+			width: 100%;
+			display: inline-block;
+			border-bottom: 1px solid #000;
+			box-sizing: border-box;
+		}
+		.part2{
+			display: flex;
+			
+		}
+		.pic2 {
+			flex: 1;
+			box-sizing: border-box;
+			display: inline-block;
+			border-left: 3px solid #000
+
+		
+		}
+		.pic2 img{
+			width: 100%;
+		}
+
+		.park .pic1 img {
+			width: 100%;
+		}
+	
+
+		.park_text {
+			padding: 10px 0;
+			width: 100%;
+			border-top: 3px solid #000
+		}
+
+		.park_text1 {
+			font-size: 1.3vw;
+			font-family: "苹方 粗体";
+			letter-spacing: 1px;
+			line-height: 2vw;
+			padding-left: 20px;
+		}
+
+		.park_text2 {
+			font-size: 2.2vw;
+			font-family: "苹方 中等";
+			padding-left: 20px;
+	
+	
+		}
+	
+		.part3 {
+			display: flex;
+			border-bottom: 1px solid #000;
+		}
+		.bookPart{
+			width: 51%;
+			display: flex;
+		}
+		.videoText{
+			flex: 1;
+			font-size: 2.2vw;
+			line-height: 3.9vw;
+			margin-left: 0.5vw;
+			position: relative;
+		}
+		.videoText span{
+			position: absolute;
+			bottom: 1vw;
+			left: 0.5vw;
+		}
+		#video{
+			display: none;
+		}
+
+		.book1 {
+			width: 100%;
+		}
+
+		.book1 video {
+			width: 100%;
+		}
+		.book1 img {
+			width:100%;
+		}
+		.book1 .bg{
+			width:100%;	
+			height: 25vw;
+			background: url('./images/WechatIMG41.jpeg') center;
+		
+		}
+
+		.book1 .book1_text1 {
+			font-size: 2vw;
+			font-family: "苹方 粗体";
+			padding-left: 20px;
+			margin-top: 1vw;
+			line-height: 3vw;
+		}
+
+		.book1 .book1_text2 {
+			font-size: 1.4vw;
+			font-family: "苹方 中等";
+			padding-left: 20px;
+			margin-top: 1vw;
+		}
+
+		.book2 {
+			flex: 1;
+			display: inline-block;
+			border-left: 1px solid #000;
+			border-right: 1px solid #000;
+		}
+		.book2 img{
+			width: 100%;
+		}
+		.book2 .book2_text1 {
+			font-size: 1.6vw;
+			font-family: "苹方 粗体";
+			line-height: 2.3vh;
+			padding-left: 20px;
+			margin-top: 0.2vw;
+		}
+
+		.book2 .book2_text2 {
+			font-size: 1vw;
+			font-family: "苹方 中等";
+			padding-left: 20px;
+			margin-top: 0.5vw;
+		}
+		.part4{
+			display: flex;
+		}
+		.part4 .left{
+			width: 50vw;
+			border-right:1px solid #000;
+			box-sizing: border-box;
+			
+		}
+		.part4 .right{
+			flex: 1;
+		}
+		.part4 .left img,.part4 .right img{
+			width: 100%;
+		}
+		.part4 .left div,.part4 .right div{
+			max-height: 40vw;
+			overflow:hidden ;
+		}
+		.part4 .left p{
+           margin-left: 0.5vw;
+		   font-size: 2vw;
+		   margin-top: 0.5vw;
+		   margin-bottom: 5vw;
+		}
+		.part4 .right p{
+			margin-right: 0.5vw;
+		    font-size: 2vw;
+		    margin-top: 0.5vw;
+			text-align: right;
+			margin-bottom: 5vw;
+
+		}
+
+
+
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<div class="name">
+			<p class="t t1">F</p>
+			<p class="t t2">Z</p>
+			<p class="t t3">Y</p>
+		</div>
+		<div class="main">
+			<div class="part1">
+				<p class="part1_text1">ZiYu(Jade)Feng</p>
+				<p class="part1_text2">Portfolio</p>
+			</div>
+			<div class="part1">
+				<p class="part1_text3">Interactive Poster:Music Nutrition Amusement</p>
+			</div>
+			<div class="part2">
+				<div class="park">
+					<div class="pic1"><img src="images/1.jpg"></div>
+					<div class="park_text">
+						<p class="park_text1">Please click to watch the live video (with music）
+						</p>
+					</div>
+					
+				</div>
+			</div>
+				<div class="part3">
+					<div class='bookPart'>
+						<ul class="book1">
+							<div class="bg" id=videoPic></div>
+							<video src="./images/video.mp4" controls id='video'></video>
+						</ul>
+					</div>
+					<div class="videoText">
+						In the design of the traditional Chinese five lines(gold, wood, water, fire, soil) and Music nutritional the concept of physiology combined to form an interactive poster of audio-visual interaction.
+					</div>
+			  </div>
+			  <div class="part3">
+				<div class='bookPart'>
+					<ul class="book1">
+						<img src="./images/6.JPG"></img>
+					</ul>
+				</div>
+				<div class="videoText">
+					<span>Film production</span> 
+
+				</div>
+		  </div>
+		  <div class="part3">
+			<div class='bookPart'>
+				<ul class="book1">
+					<img src="./images/7.jpeg"></img>
+				</ul>
+			</div>
+			<div class="videoText">
+				<span>Screen printing plate making</span> 
+
+			</div>
+		 </div>
+		 <div class="part4">
+			 <div class="left">
+				 <div>
+					<img src="./images/9.jpeg" alt="">
+				 </div>
+				
+				 <p>Screen printing products</p>
+			 </div>
+			 <div class="right">
+				 <div>
+					<img src="./images/10.jpeg" alt="">
+				 </div>
+				
+				<p>Screen printing products</p>
+			 </div>
+
+
+		 </div>
+		</div>
+	</div>
+</body>
+<script>
+	$(function(){
+		$('.book1').click(function(){
+			var bg = document.getElementById("videoPic");
+			bg.style.display='none';
+			$('#video').show();
+			var Media = document.getElementById("video");
+			Media.play();
+			Media.addEventListener("ended",function(){
+				bg.style.display='block';
+				Media.style.display='none';
+			})
+		})
+		
+	
+	})
+</script>
+
+</html>

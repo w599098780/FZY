@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>无标题文档</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		img {
+			display: block;
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		div {
+			margin: 0;
+			padding: 0;
+		}
+
+		.box {
+			display: flex;
+			height: 100vh;
+		}
+
+		.name {
+			width: 203px;
+			border: 3px solid #000000;
+			height: 100vh;
+			box-sizing: border-box;
+			position: relative;
+			overflow: hidden;
+		}
+		.name .t{
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%);
+		}
+		.t1{
+			top:2%
+		}
+		.t2{
+			top:36%
+		}
+		.t3{
+			top:72%
+		}
+
+		.name p {
+			font-size: 15vw;
+			font-family: "苹方 中等";
+			text-align: center;
+			line-height: 254px;
+		}
+
+		.main {
+			flex: 1;
+			height: 100vh;
+			overflow-y: auto;
+		}
+
+		.name,
+		.main {
+			float: left;
+		}
+	
+
+		.part1 {
+			border-bottom: 1px solid #000;
+			height: 67px;
+		}
+
+		.part1 p {
+			font-size: 40px;
+			font-family: "苹方 粗体";
+			line-height: 67px;
+			letter-spacing: 5px;
+		}
+
+		.part1_text1 {
+			float: left;
+			margin-left: 20px;
+		}
+		.part1 .part1_text3 {
+			float: left;
+			margin-left: 20px;
+			font-size: 2.2vw;
+		
+		}
+
+		.part1_text2 {
+			float: right;
+			margin-right: 50px;
+		}
+		.part1-1{
+			border-bottom: 1px solid #000;
+		}
+		.part1-1 p{
+			line-height: 2.6vw;
+			font-family: "苹方 粗体";
+			font-size: 2.2vw;
+			margin-left: 1vw;
+			height: auto;
+			padding: 20px 0;
+		}
+		.park{
+			width: 100%;
+			display: inline-block;
+			border-bottom: 1px solid #000;
+			box-sizing: border-box;
+		}
+		.part2{
+			display: flex;
+			
+		}
+	
+		.park .pic1 {
+			width: 40vw;
+			height: 36vw;
+			margin: 0 auto;
+			background-image: url('./images/3.png') ;
+			background-size: 808px 727px ;
+			margin-top: 35px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.park .pic2 {
+			width: 70%;
+			margin: 0 auto;
+		}
+		.park .pic2  img{
+			width: 100%;
+			margin-top: 35px;
+		}
+		.park .pic3 {
+			width: 60%;
+			margin: 0 auto;
+		}
+		.park .pic3  img{
+			width: 100%;
+			margin-top: 35px;
+		}
+		.park .pic3 p{
+			text-align: right;
+			font-size: 1.6vw;
+			font-family: "苹方 中等";
+			line-height: 3vw;
+			margin-bottom: 3vw;
+		}
+	
+		.park_text2{
+			width: 70%;
+			margin: 0 auto;
+			margin-top: 15px;
+			font-size: 20px;
+			margin-bottom: 5vw;
+			font-family: "苹方 中等";
+		}
+		.park_text3{
+			width: 60%;
+			margin: 0 auto;
+			font-size: 20px;
+			margin-bottom: 5vw;
+			font-family: "苹方 中等";
+		}
+
+		.park_text1 {
+			font-size: 1.3vw;
+			font-family: "苹方 粗体";
+			letter-spacing: 1px;
+			line-height: 2vw;
+			padding-left: 20px;
+		}
+		.part3 {
+			display: flex;
+			border-bottom: 3px solid #000;
+			padding-bottom: 3vw;
+		}
+		.part3 .text{
+			flex: 1;
+			font-size: 1.8vw;
+			line-height: 3vw;
+			margin-left: 0.8vw;
+		}
+		.part3 .text img{
+			width: 97%;
+		}
+		.bookPart{
+			width: 60%;
+			display: flex;
+		}
+	
+		.book1 img {
+			width: 100%;
+		}
+	
+		
+
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<div class="name">
+			<p class="t t1">F</p>
+			<p class="t t2">Z</p>
+			<p class="t t3">Y</p>
+		</div>
+		<div class="main">
+			<div class="part1">
+				<p class="part1_text1">ZiYu(Jade)Feng</p>
+				<p class="part1_text2">Portfolio</p>
+			</div>
+			<div class="part1-1">
+				<p>Illustration and Book Binding Design of “Shan Hai Jing” </p>
+			</div>
+			<div class="part3">
+				<div class='bookPart'>
+					<ul class="book1">
+						<img src="./images/2.jpg"></img>
+					</ul>
+				</div>
+				<div class="text">
+					“Shan Hai Jing” is the most 
+famous collection of myths 
+in China, I used the design 
+thinking of bookbinding and 
+illustration to redefine the 
+design of it in my bachelor’s 
+graduation project. 
+						<img src="./images/book1.jpg">
+
+				</div>
+		  </div>
+		
+			<div class="part2">
+				<div class="park">
+					<div class="pic3">
+						<img src="./images/book2.jpg" alt="">
+						<p>Book inner page display</p>
+					</div>
+				</div>
+			</div>
+			<div class="part2">
+				<div class="park">
+					<div class="pic3">
+						<img src="./images/book3.jpg" alt="">
+						<p>Book cover display</p>
+					</div>	
+				</div>
+			</div>
+			<div class="part2">
+				<div class="park">
+					<div class="pic3">
+						<img src="./images/book4.JPG" alt="">
+						<p>Illustrator display
+						</p>
+					</div>	
+				</div>
+			</div>
+			<div class="part2">
+				<div class="park">
+					<div class="pic3">
+						<img src="./images/book5.JPG" alt="">
+						<p>Illustrator display
+						</p>
+					</div>	
+				</div>
+			</div>
+			<div class="part2">
+				<div class="park">
+					<div class="pic3">
+						<img src="./images/book6.png" alt="">
+						<p>Poster display
+						</p>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</html>

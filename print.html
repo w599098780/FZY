@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>无标题文档</title>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		img {
+			display: block;
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		div {
+			margin: 0;
+			padding: 0;
+		}
+
+		.box {
+			display: flex;
+			height: 100vh;
+		}
+
+		.name {
+			width: 203px;
+			border: 3px solid #000000;
+			height: 100vh;
+			box-sizing: border-box;
+			position: relative;
+			overflow: hidden;
+		}
+		.name .t{
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%);
+		}
+		.t1{
+			top:2%
+		}
+		.t2{
+			top:36%
+		}
+		.t3{
+			top:72%
+		}
+
+		.name p {
+			font-size: 15vw;
+			font-family: "苹方 中等";
+			text-align: center;
+			line-height: 254px;
+		}
+
+		.main {
+			flex: 1;
+			height: 100vh;
+			overflow-y: auto;
+		}
+
+		.name,
+		.main {
+			float: left;
+		}
+	
+
+		.part1 {
+			border-bottom: 3px solid #000;
+			height: 67px;
+		}
+
+		.part1 p {
+			font-size: 40px;
+			font-family: "苹方 粗体";
+			line-height: 67px;
+			letter-spacing: 5px;
+		}
+
+		.part1_text1 {
+			float: left;
+			margin-left: 20px;
+		}
+		.part1 .part1_text3 {
+			float: left;
+			margin-left: 20px;
+			font-size: 2.2vw;
+		
+		}
+
+		.part1_text2 {
+			float: right;
+			margin-right: 50px;
+		}
+		.park{
+			width: 100%;
+			display: inline-block;
+			border-bottom: 1px solid #000;
+			box-sizing: border-box;
+		}
+		.part2{
+			display: flex;
+			
+		}
+	
+		.park .pic1 {
+			width: 40vw;
+			height: 36vw;
+			margin: 0 auto;
+			background-image: url('./images/3.png') ;
+			background-size: 808px 727px ;
+			margin-top: 35px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.park .pic2 {
+			width: 70%;
+			margin: 0 auto;
+		}
+		.park .pic2  img{
+			width: 100%;
+			margin-top: 35px;
+		}
+		.park .pic3 {
+			width: 60%;
+			margin: 0 auto;
+		}
+		.park .pic3  img{
+			width: 100%;
+			margin-top: 35px;
+		}
+	
+
+		.park_text {
+			width: 40vw;
+			margin: 0 auto;
+			margin-top: 15px;
+			font-size: 20px;
+			margin-bottom: 5vw;
+			font-family: "苹方 中等";
+		}
+		.park_text2{
+			width: 70%;
+			margin: 0 auto;
+			margin-top: 15px;
+			font-size: 20px;
+			margin-bottom: 5vw;
+			font-family: "苹方 中等";
+		}
+		.park_text3{
+			width: 60%;
+			margin: 0 auto;
+			font-size: 20px;
+			margin-bottom: 5vw;
+			font-family: "苹方 中等";
+		}
+
+		.park_text1 {
+			font-size: 1.3vw;
+			font-family: "苹方 粗体";
+			letter-spacing: 1px;
+			line-height: 2vw;
+			padding-left: 20px;
+		}
+	
+		
+
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<div class="name">
+			<p class="t t1">F</p>
+			<p class="t t2">Z</p>
+			<p class="t t3">Y</p>
+		</div>
+		<div class="main">
+			<div class="part1">
+				<p class="part1_text1">ZiYu(Jade)Feng</p>
+				<p class="part1_text2">Portfolio</p>
+			</div>
+			<div class="part1">
+				<p class="part1_text3">Hand-printed design</p>
+			</div>
+			<div class="part2">
+				<div class="park">
+					<div class="pic1"></div>
+					<div class="park_text">
+						A moment<br/>
+							Etchings,2018,Lucerne
+					</div>
+					
+				</div>
+			</div>
+			<div class="part2">
+				<div class="park">
+					<div class="pic2"><img src="./images/12.png" alt=""></div>
+					<div class="park_text2">
+							Random<br/>
+Ink paper and print,2018,Lucerne
+					</div>
+					
+				</div>
+			</div>
+			<div class="part2">
+				<div class="park">
+					<div class="pic3"><img src="./images/14.png" alt=""></div>
+					<div class="park_text3">
+Gloves<br/>
+Ink paper and print,2018,Lucerne
+					</div>
+					
+				</div>
+			</div>
+			<div class="part2">
+				<div class="park">
+					<div class="pic3"><img src="./images/15.jpg" alt=""></div>
+					<div class="park_text3">
+Bird<br/>
+wood printing,2018,Lucerne
+					</div>
+					
+				</div>
+			</div>
+			<div class="part2">
+				<div class="park">
+					<div class="pic3"><img src="./images/11.jpeg" alt=""></div>
+					<div class="park_text3">
+Bird<br/>
+wood printing,2018,Lucerne
+					</div>
+					
+				</div>
+			</div>
+			
+		
+	
+		</div>
+	</div>
+</body>
+<script>
+	$(function(){
+		$('.book1').click(function(){
+			var bg = document.getElementById("videoPic");
+			bg.style.display='none';
+			$('#video').show();
+			var Media = document.getElementById("video");
+			Media.play();
+			Media.addEventListener("ended",function(){
+				bg.style.display='block';
+				Media.style.display='none';
+			})
+		})
+		
+	
+	})
+</script>
+
+</html>
